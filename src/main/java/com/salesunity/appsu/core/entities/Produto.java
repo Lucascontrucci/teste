@@ -27,7 +27,7 @@ public class Produto extends BaseEntity {
 
     @OneToMany(mappedBy = "produto", fetch = FetchType.LAZY)
     @ToString.Exclude
-    private List<Orcamento> produto_cotacao;
+    private List<ItemCotacao> produto_cotacao;
 
 
 }

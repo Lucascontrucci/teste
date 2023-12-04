@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name="Orcamento")
-public class Orcamento {
+public class ItemCotacao {
 
     @Id
     @GeneratedValue

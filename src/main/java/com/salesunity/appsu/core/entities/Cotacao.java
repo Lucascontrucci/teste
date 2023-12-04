@@ -20,7 +20,7 @@ public class Cotacao extends BaseEntity {
 
     @OneToMany(mappedBy = "cotacao", fetch = FetchType.LAZY)
     @ToString.Exclude
-    private List<Orcamento> produto_cotacao;
+    private List<ItemCotacao> produto_cotacao;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "FK_fornecedor_ID")
