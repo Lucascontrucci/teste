@@ -26,7 +26,7 @@ public class CotacaoDTO {
         this.data_cotacao = cotacao.getData_cotacao();
         this.produto_cotacao = cotacao.getProduto_cotacao();
         this.fornecedor = cotacao.getFornecedor();
-        this.usuario = cotacao.getUsuario();
+        this.usuario_email = cotacao.getUsuario() != null ? cotacao.getUsuario().getEmail() : null;
     }
 
     private Long id;
@@ -34,5 +34,5 @@ public class CotacaoDTO {
     private Date data_cotacao;
     private List<ItemCotacao> produto_cotacao;
     private Fornecedor fornecedor;
-    private Usuario usuario;
+    private String usuario_email;
 }

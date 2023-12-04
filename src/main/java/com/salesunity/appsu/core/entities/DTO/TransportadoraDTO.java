@@ -26,8 +26,12 @@ public class TransportadoraDTO {
         this.endereco = transportadora.getEndereco();
         this.telefone = transportadora.getTelefone();
         this.tipos_servico = transportadora.getTipos_servico();
-        this.fornecedores = transportadora.getFornecedores();
-        this.compras = transportadora.getCompras();
+        for(Fornecedor fornecedor : transportadora.getFornecedores()){
+           this.fornecedores_id.add(fornecedor.getId());
+        }
+        for(Compra compra : transportadora.getCompras()){
+            this.compras_id.add(compra.getId());
+        }
     }
 
     private Long id;
@@ -36,7 +40,7 @@ public class TransportadoraDTO {
     private Endereco endereco;
     private Telefone telefone;
     private String tipos_servico;
-    private List<Fornecedor> fornecedores;
-    private List<Compra> compras;
+    private List<Long> fornecedores_id;
+    private List<Long> compras_id;
 
 }

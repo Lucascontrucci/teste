@@ -7,10 +7,11 @@ import com.salesunity.appsu.core.entities.Transportadora;
 import com.salesunity.appsu.core.entities.valueObjects.Endereco;
 import com.salesunity.appsu.core.entities.valueObjects.Telefone;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
-
+@Data
 public class FornecedorDTO {
 
     public FornecedorDTO(){};

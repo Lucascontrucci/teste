@@ -1,5 +1,6 @@
 package com.salesunity.appsu.controllers;
 
+import com.salesunity.appsu.core.entities.DTO.UsuarioDTO;
 import com.salesunity.appsu.core.entities.Usuario;
 import com.salesunity.appsu.core.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,23 +17,27 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @GetMapping
-    public Iterable<Usuario> getAllUsuarios(){
+    public Iterable<UsuarioDTO> getAllUsuarios(){
         return usuarioService.getAllUsuarios();
     }
-    @GetMapping("/{id}")
-    public void getUsuarioById(@RequestParam Long id){
-        usuarioService.getUsuarioById(id);
+    @GetMapping("/{email}")
+    public ResponseEntity<UsuarioDTO> getUsuarioById(@RequestParam String email){
+        return ResponseEntity.ok(usuarioService.getUsuarioByEmail(email));
     }
 
-
     @PostMapping
-    public void createUsuario(@RequestBody Usuario usuario){
-        usuarioService.createUsuario(usuario);
+    public ResponseEntity<UsuarioDTO> createUsuario(@RequestBody UsuarioDTO usuarioDTO){
+        return ResponseEntity.ok(usuarioService.createUsuario(usuarioDTO));
     }
 
     @DeleteMapping("/{id}")
     public void deleteUsuarioById(@RequestParam Long id){
         usuarioService.deleteUsuario(id);
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<UsuarioDTO> updateUsuario(@RequestBody UsuarioDTO usuarioDTO){
+        return ResponseEntity.ok(usuarioService.updateUsuario(usuarioDTO));
     }
 
 }
