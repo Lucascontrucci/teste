@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name="Cliente")
-public class Cliente {
+public class Cliente{
 
     @Id
     @Column(length = 50)

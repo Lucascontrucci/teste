@@ -29,29 +29,4 @@ public class Usuario {
     @ToString.Exclude
     private List<Cotacao> cotacoes;
 
-
-
-
-    public Usuario(String email, String nome_usuario, String senha, String perfil_usuario) {
-        this.email = email;
-        this.nome_usuario = nome_usuario;
-        this.senha = senha;
-        this.perfil_usuario = perfil_usuario;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getNome_usuario() {
-        return nome_usuario;
-    }
-
-    public void setNome_usuario(String nome_usuario) {
-        this.nome_usuario = nome_usuario;
-    }
 }
