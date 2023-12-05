@@ -69,7 +69,7 @@ O investimento inicial inclui a migração para a nuvem híbrida da Azure e a co
 ---
 
 Proposta Tecnológica: 
-![VIDEO](https://www.youtube.com/watch?v=SJLdBj19P7Y)
+[VIDEO](https://www.youtube.com/watch?v=SJLdBj19P7Y)
 ---
 
 ### EndPoints
