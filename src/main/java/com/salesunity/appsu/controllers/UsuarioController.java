@@ -31,8 +31,9 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUsuarioById(@RequestParam Long id){
+    public ResponseEntity<Void> deleteUsuarioById(@RequestParam Long id){
         usuarioService.deleteUsuario(id);
+        return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/update")

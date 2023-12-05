@@ -19,14 +19,14 @@ public class ItemCotacaoDTO {
         this.id = itemCotacao.getId();
         this.qtd_solicitada = itemCotacao.getQtd_solicitada();
         this.prc_cotado = itemCotacao.getPrc_cotado();
-        this.produto = itemCotacao.getProduto();
-        this.cotacao = itemCotacao.getCotacao();
+        this.produto_id = itemCotacao.getProduto().getId();
+        this.cotacao_id = itemCotacao.getCotacao().getId();
     }
 
     private UUID id;
     private Integer qtd_solicitada;
     private Double prc_cotado;
-    private Produto produto;
-    private Cotacao cotacao;
+    private Long produto_id;
+    private Long cotacao_id;
 
 }

@@ -18,11 +18,11 @@ public class CompraDTO {
         this.quantidade = compra.getQuantidade();
         this.preco_compra = compra.getPreco_compra();
         this.transportadora = compra.getTransportadora();
-        this.cliente = compra.getCliente();
+        this.email_cliente = compra.getCliente().getEmail();
     }
     private Long id;
     private Integer quantidade;
     private Double preco_compra;
     private Transportadora transportadora;
-    private Cliente cliente;
+    private String email_cliente;
 }
