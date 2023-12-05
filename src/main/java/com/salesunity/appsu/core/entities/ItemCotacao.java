@@ -2,12 +2,14 @@ package com.salesunity.appsu.core.entities;
 
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.UUID;
 
 @Entity
+@Data
 @Table(name="Orcamento")
-public class Orcamento {
+public class ItemCotacao {
 
     @Id
     @GeneratedValue
