@@ -18,7 +18,7 @@ public class FornecedorController {
         return fornecedorService.getAllFornecedors();
     }
     @GetMapping("/{id}")
-    public ResponseEntity<FornecedorDTO> getFornecedorById(@RequestParam Long id){
+    public ResponseEntity<FornecedorDTO> getFornecedorById(@PathVariable Long id){
         return ResponseEntity.ok(fornecedorService.getFornecedorById(id));
     }
 
@@ -28,7 +28,7 @@ public class FornecedorController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteFornecedorById(@RequestParam Long id){
+    public ResponseEntity<Void> deleteFornecedorById(@PathVariable Long id){
         fornecedorService.deleteFornecedor(id);
         return ResponseEntity.noContent().build();
     }

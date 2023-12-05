@@ -8,10 +8,11 @@ import com.salesunity.appsu.core.repositories.CompraRepository;
 import com.salesunity.appsu.core.repositories.FornecedorRepository;
 import com.salesunity.appsu.core.repositories.TransportadoraRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-
+@Service
 public class TransportadoraService {
 
     @Autowired

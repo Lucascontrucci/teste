@@ -18,7 +18,7 @@ public class CompraController {
         return compraService.getAllCompras();
     }
     @GetMapping("/{id}")
-    public ResponseEntity<CompraDTO> getCompraById(@RequestParam Long id){
+    public ResponseEntity<CompraDTO> getCompraById(@PathVariable Long id){
         return ResponseEntity.ok(compraService.getById(id));
     }
 
@@ -28,7 +28,7 @@ public class CompraController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteCompraById(@RequestParam Long id){
+    public ResponseEntity<Void> deleteCompraById(@PathVariable Long id){
         compraService.deleteCompra(id);
         return ResponseEntity.noContent().build();
     }

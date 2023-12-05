@@ -18,7 +18,7 @@ public class ClienteController {
         return clienteService.getAllClientes();
     }
     @GetMapping("/{email}")
-    public ResponseEntity<ClienteDTO> getClienteById(@RequestParam String email){
+    public ResponseEntity<ClienteDTO> getClienteById(@PathVariable String email){
         return ResponseEntity.ok(clienteService.getClienteByEmail(email));
     }
 
@@ -28,7 +28,7 @@ public class ClienteController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteClienteById(@RequestParam Long id){
+    public ResponseEntity<Void> deleteClienteById(@PathVariable Long id){
         clienteService.deleteCliente(id);
         return ResponseEntity.noContent().build();
     }

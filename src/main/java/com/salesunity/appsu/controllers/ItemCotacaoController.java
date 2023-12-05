@@ -7,7 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
-
+@RestController
+@RequestMapping("/api/v1/itemcotacao")
 public class ItemCotacaoController {
 
     @Autowired
@@ -18,7 +19,7 @@ public class ItemCotacaoController {
         return itemcotacaoService.getAllItemCotacaos();
     }
     @GetMapping("/{id}")
-    public ResponseEntity<ItemCotacaoDTO> getItemCotacaoById(@RequestParam UUID id){
+    public ResponseEntity<ItemCotacaoDTO> getItemCotacaoById(@PathVariable UUID id){
         return ResponseEntity.ok(itemcotacaoService.getItemCotacaoById(id));
     }
 
@@ -28,7 +29,7 @@ public class ItemCotacaoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteItemCotacaoById(@RequestParam UUID id){
+    public ResponseEntity<Void> deleteItemCotacaoById(@PathVariable UUID id){
         itemcotacaoService.deleteItemCotacao(id);
         return ResponseEntity.noContent().build();
     }
