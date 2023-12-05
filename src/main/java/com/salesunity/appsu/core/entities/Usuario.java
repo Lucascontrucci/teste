@@ -15,6 +15,8 @@ import java.util.List;
 @Table(name="Usuario")
 public class Usuario {
 
+
+
     @Id
     @Column(length = 50)
     private String email;

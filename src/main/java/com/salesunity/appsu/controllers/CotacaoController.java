@@ -18,7 +18,7 @@ public class CotacaoController {
         return cotacaoService.getAllCotacaos();
     }
     @GetMapping("/{id}")
-    public ResponseEntity<CotacaoDTO> getCotacaoById(@RequestParam Long id){
+    public ResponseEntity<CotacaoDTO> getCotacaoById(@PathVariable Long id){
         return ResponseEntity.ok(cotacaoService.getCotacaoById(id));
     }
 
@@ -28,7 +28,7 @@ public class CotacaoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteCotacaoById(@RequestParam Long id){
+    public ResponseEntity<Void> deleteCotacaoById(@PathVariable Long id){
         cotacaoService.deleteCotacao(id);
         return ResponseEntity.noContent().build();
     }

@@ -18,7 +18,7 @@ public class ProdutoController {
         return produtoService.getAllProdutos();
     }
     @GetMapping("/{id}")
-    public ResponseEntity<ProdutoDTO> getProdutoById(@RequestParam Long id){
+    public ResponseEntity<ProdutoDTO> getProdutoById(@PathVariable Long id){
         return ResponseEntity.ok(produtoService.getProdutoById(id));
     }
 
@@ -28,7 +28,7 @@ public class ProdutoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteProdutoById(@RequestParam Long id){
+    public ResponseEntity<Void> deleteProdutoById(@PathVariable Long id){
         produtoService.deleteProduto(id);
         return ResponseEntity.noContent().build();
     }

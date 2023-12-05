@@ -23,6 +23,12 @@ public class ItemCotacaoDTO {
         this.cotacao_id = itemCotacao.getCotacao().getId();
     }
 
+    public ItemCotacaoDTO(UUID id, Integer qtd_solicitada, Double prc_cotado) {
+        this.id = id;
+        this.qtd_solicitada = qtd_solicitada;
+        this.prc_cotado = prc_cotado;
+    }
+
     private UUID id;
     private Integer qtd_solicitada;
     private Double prc_cotado;

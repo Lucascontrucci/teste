@@ -21,7 +21,7 @@ public class UsuarioController {
         return usuarioService.getAllUsuarios();
     }
     @GetMapping("/{email}")
-    public ResponseEntity<UsuarioDTO> getUsuarioById(@RequestParam String email){
+    public ResponseEntity<UsuarioDTO> getUsuarioById(@PathVariable String email){
         return ResponseEntity.ok(usuarioService.getUsuarioByEmail(email));
     }
 
@@ -31,7 +31,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUsuarioById(@RequestParam Long id){
+    public ResponseEntity<Void> deleteUsuarioById(@PathVariable Long id){
         usuarioService.deleteUsuario(id);
         return ResponseEntity.noContent().build();
     }

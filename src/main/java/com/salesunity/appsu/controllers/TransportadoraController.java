@@ -19,7 +19,7 @@ public class TransportadoraController {
         return transportadoraService.getAllTransportadoras();
     }
     @GetMapping("/{id}")
-    public ResponseEntity<TransportadoraDTO> getTransportadoraById(@RequestParam Long id){
+    public ResponseEntity<TransportadoraDTO> getTransportadoraById(@PathVariable Long id){
         return ResponseEntity.ok(transportadoraService.getTransportadoraById(id));
     }
 
@@ -29,7 +29,7 @@ public class TransportadoraController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTransportadoraById(@RequestParam Long id){
+    public ResponseEntity<Void> deleteTransportadoraById(@PathVariable Long id){
         transportadoraService.deleteTransportadora(id);
         return ResponseEntity.noContent().build();
     }

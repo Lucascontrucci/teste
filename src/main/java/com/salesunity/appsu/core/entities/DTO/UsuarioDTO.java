@@ -20,7 +20,11 @@ public class UsuarioDTO {
         this.perfil_usuario = usuario.getPerfil_usuario();
         this.cotacoes = usuario.getCotacoes();
     }
-
+    public UsuarioDTO(String email, String nome_usuario, String perfil_usuario){
+        this.email = email;
+        this.nome_usuario = nome_usuario;
+        this.perfil_usuario = perfil_usuario;
+    }
     private String email;
     private String nome_usuario;
     private String senha;
